@@ -4,7 +4,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, add_index :users, :name,unique: true|
+|name|string|null: false, add_index :users, :name,unique: true|
 |email|string|null: false, add_index :users, :email,unique: true|
 |password|string|null: false|
 ### Association
