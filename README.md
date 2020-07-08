@@ -15,7 +15,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index :groups, :name,unique: true|
+|name|string|null: false|
 ### Association
 - has_many :messages
 - has_many :groups_users
