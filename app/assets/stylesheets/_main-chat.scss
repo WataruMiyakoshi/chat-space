@@ -1,15 +1,5 @@
-// リファクタリング
-$submit-blue: #38aef0;
-  // Submitの色の定義
-$font-color-black: #333333;
-$font-color-gray: #999999;
-  // フォントカラーの定義
-$form-height: 50px;
-  // フォームの高さの定義(25-80px目安)
-  // ビュー崩れせずに任意の高さに設定可能
-$send-btn-width: 30px;
-  // Sendボタンの"横 方 向 padding"の定義
-  // フォームの高さの変更時に適宜調整
+@import "colors";
+@import "form-size-definitions";
 
 .Chat-main {
   width: calc(100vw - 300px);
