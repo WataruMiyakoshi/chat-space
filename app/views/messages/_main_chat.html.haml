@@ -1,0 +1,33 @@
+.Chat-main
+  .Main-header
+    .Group-info
+      .Group-info__name
+        techcamp
+      .Group-info__member
+        Member : wataru
+    .Group-edit
+      = link_to "#", class:"Group-edit__btn" do
+        Edit
+  .Message-list
+    .Message-list__content
+      .Message-list__content__user-name
+        wataru
+      .Message-list__content__date
+        2020/7/11(Sat) 0:54:56
+    .Message-list__message
+      おやすみ
+    .Message-list__content
+      .Message-list__content__user-name
+        wataru
+      .Message-list__content__date
+        2020/7/11(Sat) 8:54:56
+    .Message-list__message
+      おはよう
+  .Main-footer
+    %form.Message-form
+      .Message-form__field
+        %input.Message-form__field__text{type:"text", placeholder:"type a text"}
+        %label.Message-form__field__image
+          = icon('far', 'image')
+          %input.Message-form__field__image__file{type:"file"}
+      %input.Message-form__btn{type: "submit", value: "Send"}
