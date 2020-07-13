@@ -2,12 +2,12 @@
   .Side-header
     .User-info
       .User-info__name
-        wataru
+        = current_user.name
       .User-info__icon
         = link_to "#", class:"User-info__icon__btn" do
           = icon('far', 'edit' )
           %span.txtred<>
-        = link_to "#", class:"User-info__icon__btn" do
+        = link_to edit_user_path(current_user), class:"User-info__icon__btn" do
           = icon('fas', 'cog' )
   .Group-lists
     .Group-lists__name
