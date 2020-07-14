@@ -29,17 +29,19 @@
     }
   }
   
-  .Group-lists {
+  .Group-list {
     height: calc(100vh - 100px);
     padding: 20px;
     background-color: #2f3e51;
     color: $font-color-white;
-    &__name {
-      font-size: 15px;
-    }
-    &__latest-message {
-      margin-bottom: 40px;
-      font-size: 11px;
+    .Group{
+      &__name {
+        font-size: 15px;
+      }
+      &__latest-message {
+        margin-bottom: 40px;
+        font-size: 11px;
+      }
     }
   }
 }

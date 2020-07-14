@@ -4,25 +4,16 @@
       .User-info__name
         = current_user.name
       .User-info__icon
-        = link_to "#", class:"User-info__icon__btn" do
+        = link_to new_group_path, class:"User-info__icon__btn" do
           = icon('far', 'edit' )
           %span.txtred<>
         = link_to edit_user_path(current_user), class:"User-info__icon__btn" do
           = icon('fas', 'cog' )
-  .Group-lists
-    .Group-lists__name
-      techcamp
-    .Group-lists__latest-message
-      おはよう
-    .Group-lists__name
-      techcamp2
-    .Group-lists__latest-message
-      まだメッセージがありません
-    .Group-lists__name
-      techcamp3
-    .Group-lists__latest-message
-      まだメッセージがありません
-    .Group-lists__name
-      techcamp4
-    .Group-lists__latest-message
-      まだメッセージがありません
+  .Group-list
+    - current_user.groups.each do |group|
+      .Group
+        - link_to '#'
+        .Group__name
+          = group.name
+        .Group__latest-message
+          メッセジ

@@ -1,7 +1,7 @@
 # README
 
 # ChatSpace DB設計
-## usersテーブル
+## userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, add_index :users, :name,unique: true|
@@ -9,19 +9,19 @@
 |password|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups_users
-- has_many :groups,  through:  : groups_users
+- has_many :group_users
+- has_many :groups,  through:  : group_users
 
-## groupsテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups_users
-- has_many :users,  through:  : groups_users
+- has_many :group_users
+- has_many :users,  through:  : group_users
 
-## groups_usersテーブル
+## group_userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -30,7 +30,7 @@
 - belongs_to :user
 - belongs_to :group
 
-## messagesテーブル
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
