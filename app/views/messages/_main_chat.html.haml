@@ -2,32 +2,22 @@
   .Main-header
     .Group-info
       .Group-info__name
-        techcamp
+        = @group.name
       .Group-info__member
-        Member : wataru
+        Member : 
+        - @member.each do |member|
+          = member.name
     .Group-edit
-      = link_to "#", class:"Group-edit__btn" do
+      = link_to edit_group_path(@group), class:"Group-edit__btn" do
         Edit
   .Message-list
-    .Message-list__content
-      .Message-list__content__user-name
-        wataru
-      .Message-list__content__date
-        2020/7/11(Sat) 0:54:56
-    .Message-list__message
-      おやすみ
-    .Message-list__content
-      .Message-list__content__user-name
-        wataru
-      .Message-list__content__date
-        2020/7/11(Sat) 8:54:56
-    .Message-list__message
-      おはよう
+    = render @messages
+
   .Main-footer
-    %form.Message-form
+    = form_with model: [@group, @message], html: {class: "Message-form"}, local: true do |f|
       .Message-form__field
-        %input.Message-form__field__text{type:"text", placeholder:"type a text"}
-        %label.Message-form__field__image
-          = icon('far', 'image')
-          %input.Message-form__field__image__file{type:"file"}
-      %input.Message-form__btn{type: "submit", value: "Send"}
+        = f.text_field :body, class: "Message-form__field__text", placeholder: "type a text"
+        = f.label :image, class: "Message-form__field__image" do
+          = icon('far', 'image', class: "Message-form__icon")
+          = f.file_field :image, class: "Hidden"
+      = f.submit "Send", class: "Message-form__btn"

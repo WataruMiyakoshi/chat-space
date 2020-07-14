@@ -59,10 +59,15 @@
         font-size: 12px;
       }
     }
-    &__message {
-      margin-bottom: 46px;
-      color: #434a54;
-      font-size: 14px;
+    &__files {
+      .message{
+        margin-bottom: 46px;
+        color: #434a54;
+        font-size: 14px;
+      }
+      .image{
+        height: 300px;
+      }
     }
   }
 
@@ -81,6 +86,11 @@
         width: inherit;
         margin-right: 15px;
         position: relative;
+        .field_with_errors{
+          height: inherit;
+          width: inherit;
+          // position: relative;
+        }
         &__text {
           height: inherit;
           width: inherit;
@@ -93,8 +103,9 @@
             line-height: $form-height;
             position: absolute;
             right: 10px;
+            bottom: 0;
             cursor: pointer;
-            &__file {
+            .Hidden {
               display: none;
             }
         }
