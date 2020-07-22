@@ -40,12 +40,13 @@
         line-height: 40px;
       }
     }
-    
+
   }
   .Message-list {
     padding: 35px 0 0 40px;
     height: calc(100vh - 190px);
     background-color: #fafafa;
+    overflow: scroll;
     &__content {
       margin-bottom: 12px;
       display: flex;
