@@ -50,10 +50,11 @@ $(function(){
       $('.Message-list').append(html);
       $('.Message-list').animate({ scrollTop: $('.Message-list')[0].scrollHeight});
       $('form')[0].reset();
-      $('.Message-form__btn').prop('disabled', false)
     })
     .fail(function(){
       alert("oops!!メッセージか画像を入れてね！>_<ぴえん");
+    })
+    .always(function(){
       $('.Message-form__btn').prop('disabled', false)
     });
   });
