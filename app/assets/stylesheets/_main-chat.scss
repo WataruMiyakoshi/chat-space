@@ -49,26 +49,28 @@
     overflow: scroll;
     &__content {
       margin-bottom: 12px;
-      display: flex;
-      &__user-name {
-        margin-right: 5px;
-        color: $font-color-black;
-        font-size: 16px;
-      }
-      &__date {
-        color: $font-color-gray;
-        font-size: 12px;
+      .Message-info {
+        display: flex;
+        &__user-name {
+          margin-right: 5px;
+          color: $font-color-black;
+          font-size: 16px;
+        }
+        &__date {
+          color: $font-color-gray;
+          font-size: 12px;
+        }
       }
     }
-    &__files {
-      .message{
-        margin-bottom: 46px;
-        color: #434a54;
-        font-size: 14px;
-      }
-      .image{
-        height: 300px;
-      }
+      .Message-list__files {
+        .message{
+          margin-bottom: 46px;
+          color: #434a54;
+          font-size: 14px;
+        }
+        .image{
+          height: 300px;
+        }
     }
   }
 
@@ -100,15 +102,15 @@
           border: none;
         }
         &__image {
-            height: inherit;
-            line-height: $form-height;
-            position: absolute;
-            right: 10px;
-            bottom: 0;
-            cursor: pointer;
-            .Hidden {
-              display: none;
-            }
+          height: inherit;
+          line-height: $form-height;
+          position: absolute;
+          right: 10px;
+          bottom: 0;
+          cursor: pointer;
+          .Hidden {
+            display: none;
+          }
         }
       }
       &__btn {
