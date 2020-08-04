@@ -44,7 +44,7 @@ RSpec.describe MessagesController, type: :controller do
       context 'can save' do
         subject {
           post :create,
-          params: params
+               params: params
         }
         # postメソッドでcreateアクションを擬似的にリクエストした結果
         it 'count up message' do
@@ -64,7 +64,7 @@ RSpec.describe MessagesController, type: :controller do
 
         subject {
           post :create,
-          params: invalid_params
+               params: invalid_params
         }
 
         it 'does not count up' do
