@@ -62,7 +62,7 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.13.0'
 gem "haml-rails", "~> 2.0"
